@@ -4,7 +4,6 @@ const client = new Discord.Client({
     commandPrefix: '~'
 });
 client.registry.registerGroups([
-    ['game', 'The addicting ones'],
     ['fun', 'The funny ones'],
     ['other', 'Other stuff']
 ])
