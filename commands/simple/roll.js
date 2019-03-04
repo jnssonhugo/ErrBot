@@ -10,18 +10,24 @@ class Roll extends commando.Command {
         });
     }
     async run(message, args) {
+        var nr = message.content.substring(5);
+        if (nr > 0) {
+            message.channel.send('Don\'t you try to fool me!');
+            return;
+        }
+
         var roll = Math.floor(Math.random() * 100) + 1;
         if (roll == 100) {
             message.channel.send(
-                'You rolled the perfect ' + roll
+                `Waow! You rolled ${roll}`
             )
         } else if (roll == 0) {
             message.channel.send(
-                'What are the odds? You rolled ' + roll
+                `Loser! You rolled: ${roll}`
             )
         } else {
             message.channel.send(
-                'You rolled: ' + roll + '!'
+                `You rolled: ${roll}`
             )
         }
     }
