@@ -4,7 +4,7 @@ class WhatIs extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'whatis',
-            group: 'other',
+            group: 'fun',
             memberName: 'whatis',
             description: 'Will google your question and paste the answer!'
         });
